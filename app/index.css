@@ -1,0 +1,194 @@
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  line-height: 1.42324123434345345;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+h1 {
+  display: block;
+  margin: 50px 0;
+  padding: 0;
+  text-align: center;
+}
+
+app {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+}
+
+.todo-add_input {
+  width: 130px;
+  height: 20px;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.todo-add_confirm {
+  width: 40px;
+  height: 20px;
+  margin-left: 10px;
+  -webkit-appearance: none;
+  float: right;
+  appearance: none;
+
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  display: inline-block;
+  padding: 2px 2px 3px;
+  border: 1px solid #999;
+  border-bottom-color: #888;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  font: bold 9px / normal 'lucida grande', tahoma, verdana, arial, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  /* outline: none; */
+  color: #333;
+  background-color: #eee;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#f5f6f6),
+    to(#e4e4e3)
+  );
+  background-image: -moz-linear-gradient(#f5f6f6, #e4e4e3);
+  background-image: -o-linear-gradient(#f5f6f6, #e4e4e3);
+  background-image: linear-gradient(#f5f6f6, #e4e4e3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f5f6f6', EndColorStr='#e4e4e3');
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #fff;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #fff;
+  zoom: 1;
+}
+
+.todo-list {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 10px 0;
+  list-style-type: none;
+}
+
+.todo-list li {
+  display: block;
+  padding: 2px 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.589131452;
+  vertical-align: middle;
+}
+
+.todo-list li:after {
+  display: table;
+  content: '';
+  line-height: 0;
+  clear: both;
+}
+
+.todo-list li span {
+  cursor: pointer;
+}
+
+.todo-list_delete {
+  display: none;
+  cursor: pointer;
+  font-size: 11px;
+  margin-left: 10px;
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.todo-list li:hover .todo-list_delete {
+  display: inline-block;
+  font-family: j;
+}
+
+.todo-list_undo {
+  color: #222;
+}
+
+.todo-list_complete {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.todo-status {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 3px 6px;
+  border: 1px dashed #f1f1f1;
+}
+
+.todo-status:after {
+  display: table;
+  content: '';
+  line-height: 0;
+  clear: both;
+}
+
+.todo-status_left {
+  float: left;
+}
+
+.todo-status_right {
+  float: right;
+}
+
+.todo-status_center {
+  font-family: monospace;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 9px;
+  padding: 0;
+}
+
+.todo-status_statu {
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.todo-status_statu.active {
+  color: #911;
+  text-decoration: underline;
+}
+
+.todo-status_counter {
+  font-size: 12px;
+  vertical-align: -1px;
+  font-weight: bold;
+}
+
+.todo-status_sync {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  width: 40px;
+  height: 16px;
+  padding: 0px 3px;
+  text-align: center;
+  font-family: monospace;
+  cursor: pointer;
+  font-size: 10px;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  appearance: none;
+}
