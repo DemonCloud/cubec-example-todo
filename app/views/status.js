@@ -37,7 +37,8 @@ const status = cubec.view({
     },
 
     'click:.todo-status_sync': function(event) {
-      // sourceModel.sync("/syncTodoList");
+      // 执行同步数据
+      sourceModel.sync("/syncTodoList");
     },
   },
 });

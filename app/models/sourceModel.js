@@ -15,7 +15,7 @@ const sourceModel = cubec.model({
 
   events: {
     init() {
-      // this.fetch();
+      this.fetch();
     },
 
     // 当资源模型发生了变化时
