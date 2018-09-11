@@ -6,6 +6,10 @@
   "scripts": {
     "dev": "webpack-dev-server -d"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemonCloud/cubec-example-todo.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
