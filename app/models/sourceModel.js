@@ -41,6 +41,11 @@ const sourceModel = cubec.model({
       // this.sync("/syncTodoList");
     },
 
+    // 成功同步到服务器
+    "sync:success": function(){
+      alert("同步成功");
+    },
+
     // 新增一条todo
     _addTodo(todo) {
       let nodes = this.get('nodes');

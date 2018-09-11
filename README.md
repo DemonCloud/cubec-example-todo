@@ -3,6 +3,6 @@ cubec example todo list appliction
 
 # dev && start
 
-> npm install
-
-> npm run dev
+```shell
+npm install && npm run dev
+```
