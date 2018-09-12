@@ -5,8 +5,8 @@ const server = require('./server');
 
 module.exports = {
   entry: './app/index.js',
-  mode: 'development',
-  // mode: 'production',
+  // mode: 'development',
+  mode: 'production',
 
   module: {
     rules: [
