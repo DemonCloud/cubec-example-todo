@@ -15,11 +15,11 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "css-loader": "^1.0.1",
-    "cubec": "^1.4.1",
+    "cubec": "^1.4.5",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   }
 }
