@@ -29,7 +29,6 @@ const App = cubec.view({
   events: {
     completeRender() {
       // 让视图和模型形成链接关系
-      // this.components.add.connect(filterModel);
       this.components.list.connect(filterModel);
       this.components.status.connect(filterModel);
     },

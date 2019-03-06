@@ -7,6 +7,7 @@ const _findIndex = cubec.struct.index();
 
 const sourceModel = cubec.model({
   name: 'sourceModel',
+
   url: '/getTodoList',
 
   data: {
@@ -91,7 +92,7 @@ const sourceModel = cubec.model({
       filterModel.set('filterStatu', statu);
 
       // 主动触发一次change事件根据状态进行重新筛选
-      this.emit('change');
+      this.push("change");
     },
   },
 });

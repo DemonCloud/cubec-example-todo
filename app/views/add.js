@@ -26,7 +26,7 @@ const add = cubec.view({
           id: Math.random().toString().replace(".","")
         };
 
-        console.log(todo);
+        // console.log(todo);
 
         sourceModel.emit('_addTodo', [todo]);
 
