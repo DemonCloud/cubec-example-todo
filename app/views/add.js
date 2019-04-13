@@ -7,13 +7,6 @@ const trim = cubec.struct.string("trim");
 const add = cubec.view({
   name: 'todo-add',
 
-  template: `
-    <div class="todo-add">
-      <input ref="_input" id="_input" type="text" class="todo-add_input">
-      <button id="_confirm" class="todo-add_confirm">ADD+</button>
-    </div>
-  `,
-
   events: {
     'click:#_confirm': function(event) {
       let text = trim(this.refs._input.value);
@@ -40,6 +33,14 @@ const add = cubec.view({
       }
     }
   },
+
+  template: `
+    <div class="todo-add">
+      <input ref="_input" id="_input" type="text" class="todo-add_input">
+      <button id="_confirm" class="todo-add_confirm">ADD+</button>
+    </div>
+  `,
+
 });
 
 export default add;

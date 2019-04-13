@@ -7,6 +7,22 @@ const status = cubec.view({
 
   props: STATUS_CODE,
 
+  events: {
+    'click:.todo-status_statu': function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      let target = event.target;
+
+      sourceModel.emit('_filterTodo', [parseInt(target._key)]);
+    },
+
+    'click:.todo-status_sync': function(event) {
+      // 执行同步数据
+      sourceModel.sync("/syncTodoList");
+    },
+  },
+
   template: `
     <div class="todo-status">
       <div class="todo-status_left">
@@ -26,21 +42,6 @@ const status = cubec.view({
     </div>
   `,
 
-  events: {
-    'click:.todo-status_statu': function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      let target = event.target;
-
-      sourceModel.emit('_filterTodo', [parseInt(target._key)]);
-    },
-
-    'click:.todo-status_sync': function(event) {
-      // 执行同步数据
-      sourceModel.sync("/syncTodoList");
-    },
-  },
 });
 
 export default status;

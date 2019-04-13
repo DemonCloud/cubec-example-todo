@@ -7,17 +7,6 @@ const list = cubec.view({
 
   props: STATUS_CODE,
 
-  template: `
-    <ul class="todo-list">
-      {{*each [node, i] in filterNodes}}
-      <li>
-        <span class="{{#node.statu === LISTFILTER_UNDO ? 'todo-list_undo' : 'todo-list_complete'}}" _nid={{#node.id}} >{{-node.text}}</span>
-        <button class="todo-list_delete" _nid={{#node.id}} >×</button>
-      </li>
-      {{*/}}
-    </ul>
-  `,
-
   events: {
     // 点击一条未完成的todo
     'click:.todo-list_undo': function(event) {
@@ -36,6 +25,18 @@ const list = cubec.view({
       sourceModel.emit('_deleteTodo', [target._nid]);
     },
   },
+
+  template: `
+    <ul class="todo-list">
+      {{*each [node, i] in filterNodes}}
+      <li>
+        <span class="{{#node.statu === LISTFILTER_UNDO ? 'todo-list_undo' : 'todo-list_complete'}}" _nid={{#node.id}} >{{-node.text}}</span>
+        <button class="todo-list_delete" _nid={{#node.id}} >×</button>
+      </li>
+      {{*/}}
+    </ul>
+  `,
+
 });
 
 export default list;

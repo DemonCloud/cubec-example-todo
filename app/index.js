@@ -10,30 +10,20 @@ import status from './views/status';
 const App = cubec.view({
   name: 'App',
 
-  template: `
-    <slot>components.add::filterModel</slot>
-    <slot>components.list::filterModel</slot>
-    <slot>components.status::filterModel</slot>
-  `,
+  connect: filterModel,
 
-  models: {
-    filterModel,
-  },
+  template: `
+    <slot>components.add</slot>
+    <slot>components.list</slot>
+    <slot>components.status</slot>
+  `,
 
   components: {
     add,
     list,
     status,
   },
-
-  events: {
-    completeRender() {
-      // 让视图和模型形成链接关系
-      this.components.list.connect(filterModel);
-      this.components.status.connect(filterModel);
-    },
-  },
 });
 
 // 挂载（启动）主视图
-App.mount(document.getElementById('app'), App.models);
+App.mount(document.getElementById('app'), filterModel);
