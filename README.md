@@ -6,3 +6,7 @@ cubec example todo list appliction
 ```shell
 npm install && npm run dev
 ```
+
+# preview
+
+![img](https://s2.ax1x.com/2019/04/13/AL1bX6.gif)
