@@ -6,7 +6,7 @@ const server = require('./server');
 module.exports = {
   entry: './app/index.js',
   // mode: 'development',
-  mode: 'production',
+  mode: 'development',
 
   module: {
     rules: [
@@ -19,7 +19,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'todoapp.webpack.min.js',
+    filename: 'todoapp.js',
   },
 
   plugins: [
@@ -37,5 +37,5 @@ module.exports = {
     before: server
   },
 
-  devtool: 'inline-cheap-source-map',
+  devtool: 'source-map',
 };

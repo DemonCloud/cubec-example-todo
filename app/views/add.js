@@ -1,8 +1,9 @@
 import cubec from 'cubec';
+import struct from 'ax-struct-js';
 import sourceModel from '../models/sourceModel';
 import STATUS_CODE from '../define/statuscode';
 
-const trim = cubec.struct.string("trim");
+const trim = struct.string("trim");
 
 const add = cubec.view({
   name: 'todo-add',

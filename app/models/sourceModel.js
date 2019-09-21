@@ -1,9 +1,10 @@
 import cubec from 'cubec';
+import struct from 'ax-struct-js';
 import filterModel from './filterModel';
 import STATUS_CODE from '../define/statuscode';
 
-const _eachArray = cubec.struct.each('array');
-const _findIndex = cubec.struct.index();
+const _eachArray = struct.each('array');
+const _findIndex = struct.index();
 
 const sourceModel = cubec.model({
   name: 'sourceModel',
